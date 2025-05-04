@@ -1,0 +1,267 @@
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Profile Card Styles */
+.profile-card, .company-profile-card {
+  grid-column: span 2;
+}
+
+.profile-info, .company-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar, .company-logo {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.profile-details h3, .company-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.profile-details p, .company-details p {
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.skills-section {
+  margin-top: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background: #f1f5f9;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+/* Applications and Job Postings Styles */
+.applications-card, .job-postings-card {
+  grid-column: span 2;
+}
+
+.application-item, .job-posting-item {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.application-header, .job-posting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.application-header h3, .job-posting-header h3 {
+  font-size: 1.125rem;
+  color: var(--text);
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.under-review {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.interviewed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.company-name, .applications {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.application-date, .dates {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Stats Card Styles */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-item p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Buttons */
+.edit-profile-btn, .post-job-btn, .view-applications-btn, .edit-job-btn, .view-all-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-profile-btn, .edit-job-btn {
+  background: #f1f5f9;
+  color: var(--text);
+  border: none;
+}
+
+.post-job-btn, .view-applications-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.view-all-btn {
+  width: 100%;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  margin-top: 1rem;
+}
+
+.edit-profile-btn:hover, .edit-job-btn:hover {
+  background: #e2e8f0;
+}
+
+.post-job-btn:hover, .view-applications-btn:hover {
+  background: var(--primary-hover);
+}
+
+.view-all-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Job Posting Actions */
+.job-posting-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.job-posting-actions button {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-card, .company-profile-card,
+  .applications-card, .job-postings-card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-info, .company-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .job-posting-actions {
+    flex-direction: column;
+  }
+} 
